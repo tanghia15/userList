@@ -1,0 +1,98 @@
+.container{
+    height: 100vh;
+    color: white;
+}
+.register-form{
+    background-color: rgb(12, 12, 55);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid aqua;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+}
+.register-header{
+    text-align: center;
+    color: rgb(105,244,181);
+    margin-bottom: 20px;
+}
+.label-text{
+    color: rgb(243,163,42);
+}
+.form-control{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.form-control:focus{
+    color: wheat;
+    background-color: transparent;
+    padding-left: 0px;
+}
+.password-field{
+    position: relative;
+}
+.password-toggle{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: aqua;
+}
+.checkbox-text{
+    color: rgb(243,165,42);
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.form-check-input{
+    margin-right: 5px;
+}
+.register-link{
+    color: aqua;
+    text-decoration: none;
+}
+.register-button{
+    background: linear-gradient(to right, rgb(255,64,180),rgb(126,43,237));
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+}
+.divider{
+    height: 1px;
+    margin: 20px;
+    background-color: rgb(243, 165, 42);
+}
+.divider-nospace{
+    border-top: 1px solid white;
+    padding: 2px;
+}
+.form-control::placeholder{
+    color: rgba(243,165,42,0.4)
+
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-container button {
+    flex: 1; /* Mở rộng nút để lấp đầy toàn bộ container */
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(177, 43, 43);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button-container button:hover {
+    background-color: red;
+  }
+  
+  
+

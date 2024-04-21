@@ -1,0 +1,57 @@
+.intro-section{
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.product-header{
+    color:pink;
+}
+.form-control{
+    background-color: rgb(228, 150, 207);
+    border: 1px solid green;
+    color: rgb(0, 0, 0);
+}
+.form-control:focus{
+    border-color: red;
+}
+.form-label{
+    color: white;
+}
+.product-order{
+    color: aqua;
+}
+table{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    border-collapse: separate;
+    border: 1px solid black;
+    background-color: aqua;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+}
+.product-infor{
+    display: flex;
+    align-items: center;
+}
+.product-image{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.product-name{
+    margin-right: 10px;
+    padding-left: 20px;
+}
+.text-end{
+    color: aqua;
+}
+.btn-gradient{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+    border-radius: 20px;
+}

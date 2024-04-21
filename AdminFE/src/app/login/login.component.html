@@ -1,0 +1,58 @@
+<div class="container">
+    <form #loginForm="ngForm">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <h2 class="login-header">ĐĂNG NHẬP</h2>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone </label>
+                    <input type="text" class="form-control"
+                            [(ngModel)]="phoneNumber" 
+                            (input)="onPhoneNumberChange()" 
+                            name="phoneNumber"
+                            (focus)="loginForm.form.markAsTouched()"
+                        id="phoneNumber">
+                    <div class="divider-nospace"></div>
+                    <p class="text-danger" 
+                        *ngIf="phoneNumber.length < 6  && loginForm.form.touched">
+                        SĐT phải có ít nhất 6 kí tự
+                </div>
+                <div class="mt-5">
+                <div class="form-group password-field">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" name="password" placeholder="Ít nhất có 3 kí tự" class="form-control"
+                    [(ngModel)]="password" 
+                    name="password"
+                    required 
+                    id="password">
+                </div>
+                <p class="text-danger" 
+                        *ngIf="password.length < 3  && loginForm.form.touched">
+                        Mật khẩu có ít nhất 3 kí tự
+                </p>
+            </div>
+                <div class="form-group">
+                    <div class="check-box">
+                        <span type="display:flex">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
+                            <a href="#" class="forgot-passwword">Quên mật khẩu</a>
+                        </span>
+                    </div>
+                </div>
+                <button type="button" class="login-button" (click)="login()">Đăng nhập</button>
+                
+                <!-- Điều chỉnh phần hiển thị dựa trên trạng thái đăng nhập -->
+                <ng-template #loggedOut>
+                    <button type="button" class="login-button" (click)="login()">Đăng nhập</button>
+                </ng-template>
+                
+                <div class="divider"></div>
+                
+                <p class="text-center">Bạn chưa đăng ký? <span><a routerLink="/register" class="register-link">Tạo tài khoản</a></span></p>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+<app-footer></app-footer>

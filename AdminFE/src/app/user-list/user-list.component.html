@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="flex flex-col gap-8 container mx-auto">
+    <h1 class="text-4xl font-bold">Users</h1>
+    <div>
+      <button class="btn-add" routerLink="/add-user" style="border-radius: 10px;background-color: rgb(77, 237, 77);" >Add User</button>
+    </div>
+    <!-- Hiển thị thông báo thành công -->
+    <div *ngIf="deleteSuccessMessage" class="success-message">
+      {{ deleteSuccessMessage }}
+    </div>
+    <!-- Hiển thị thông báo lỗi -->
+    <div *ngIf="deleteErrorMessage" class="error-message">
+      {{ deleteErrorMessage }}
+    </div>
+    <table style="width: 100%;">
+      <thead style="color: black;">
+        <tr>
+          <th>ID</th>
+          <th>Full name</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Date of birth</th>
+          <th style="width: 20%;">Action</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let user of users" style="color: aliceblue;">
+          <td>{{user.id}}</td>
+          <td>{{user.fullname}}</td>
+          <td>{{user.phone_number}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.date_of_birth| date: 'yyyy-MM-dd' }}</td>
+          <td class="flex gap-4 justify-center">
+                <a [routerLink]="'/edit-user/'+ user.id"><button class="btn-edit" style="border-radius: 10px;background-color: aqua;">Edit</button></a> 
+            <button class="btn-delete" style="border-radius: 10px;background-color: pink;" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
